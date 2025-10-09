@@ -1,6 +1,6 @@
 "use client";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useForm } from "../FormContext";
+import { useForm } from "@/contexts/form-context";
 
 const Section6 = ({ errors }: { errors: { [key: string]: string | null } }) => {
   const { formState, dispatch } = useForm();
@@ -40,7 +40,7 @@ const Section6 = ({ errors }: { errors: { [key: string]: string | null } }) => {
               − non sono in corso altre assicurazioni per i rischi da
               assicurare;{" "}
             </p>
-            <p>− l'attività descritta corrisponde a quella esercitata; </p>
+            <p>− l&apos;attività descritta corrisponde a quella esercitata; </p>
             <p>
               − le caratteristiche del Fabbricato o porzione di fabbricato in
               cui si esercita l’attività dell’Impresa, corrisponde a quanto

@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Section1 from "./sections/Section1";
 import Section6 from "./sections/Section6";
 import { Button } from "@/components/ui/button";
-import { FormProvider, useForm } from "./FormContext";
+import { FormProvider, useForm } from "@/contexts/form-context";
 import toast from "react-hot-toast";
 import { useState, useEffect } from "react";
 import { validatePIVA, validateTelefono } from "./utils/validationFunctions";
@@ -16,7 +16,6 @@ import Link from "next/link";
 const QuestionarioContent = () => {
   const { formState } = useForm();
   const [errors, setErrors] = useState<{ [key: string]: string | null }>({});
-  const [loadingSpinner, setLoadingSpinner] = useState(false);
   const [success, setSuccess] = useState(false);
 
   const params = useParams();
@@ -125,9 +124,7 @@ const QuestionarioContent = () => {
       id: idUid,
       data: formState,
     };
-    setLoadingSpinner(true);
     InviaForm(data);
-    setLoadingSpinner(false);
     /* console.log("Saving form data:", data); */
   };
 

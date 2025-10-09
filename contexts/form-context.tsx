@@ -1,6 +1,6 @@
 "use client";
+import { RowData } from "@/components/pages/Questionario/utils/datagrid";
 import { createContext, useContext, useReducer, type ReactNode } from "react";
-import { type RowData } from "./utils/datagrid";
 
 // Define the form state structure
 type FormState = {

@@ -15,7 +15,7 @@ import Section2 from "./Section2";
 import Section3 from "./Section3";
 import Section4 from "./Section4";
 import Section5 from "./Section5";
-import { useForm } from "../FormContext";
+import { useForm } from "@/contexts/form-context";
 import toast, { Toaster } from "react-hot-toast";
 
 const Ubicazioni = () => {

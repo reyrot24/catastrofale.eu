@@ -56,7 +56,7 @@ const Section2 = ({
       <div>
         <div className="flex flex-col gap-4 mb-4">
           <h1 className="font-bold py-4 text-xl text-title">
-            Sezione 2: Informazioni sull'Ubicazione del Rischio
+            Sezione 2: Informazioni sull&apos;Ubicazione del Rischio
           </h1>
           <div className="mb-8">
             <h2 className="italic text-md text-orange">Ubicazione:</h2>

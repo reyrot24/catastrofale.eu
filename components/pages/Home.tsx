@@ -26,7 +26,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { handleDownloadGestioneReclami } from "./GestioneReclami";
+
+import Image from "next/image";
+import { handleDownloadGestioneReclami } from "@/lib/downloadReclamo";
 
 const CatastrofaleHomepage = () => {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0 });
@@ -485,7 +487,7 @@ const CatastrofaleHomepage = () => {
             Riferimenti Normativi
           </h2>
           <p className="text-gray-700 mb-8">
-            L'obbligo di assicurazione contro i rischi catastrofali per le
+            L&apos;obbligo di assicurazione contro i rischi catastrofali per le
             imprese è stabilito dalla normativa italiana.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -595,9 +597,9 @@ const CatastrofaleHomepage = () => {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="/privacy" className="hover:text-white transition">
+                  <Link href="privacy" className="hover:text-white transition">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition">
@@ -611,7 +613,13 @@ const CatastrofaleHomepage = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="relative">
-                  <img src="/logo.svg" />
+                  <Image
+                    src="/logo.svg"
+                    alt="logo"
+                    className="w-full"
+                    width={0}
+                    height={0}
+                  />
                 </div>
                 <div>
                   <div className="text-white font-bold">Catastrofale.eu</div>

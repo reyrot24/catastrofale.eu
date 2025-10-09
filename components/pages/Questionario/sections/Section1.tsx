@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Search } from "lucide-react";
-import { useForm } from "../FormContext";
+import { useForm } from "@/contexts/form-context";
 import {
   Dialog,
   DialogClose,
@@ -20,7 +20,6 @@ const Section1 = ({ errors }: { errors: { [key: string]: string | null } }) => {
   const { formState, dispatch } = useForm();
   const [risultati, setRisultati] = useState<any>([]);
   const [open, setOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   async function handleSearch() {
     try {
@@ -47,7 +46,6 @@ const Section1 = ({ errors }: { errors: { [key: string]: string | null } }) => {
 
   async function handleSelectCompany(id: string) {
     setOpen(false); // Close the dialog
-    setLoading(true);
     setRisultati([]);
     try {
       const options = {
@@ -90,7 +88,6 @@ const Section1 = ({ errors }: { errors: { [key: string]: string | null } }) => {
     } catch (err) {
       console.log(err);
     }
-    setLoading(false);
   }
 
   return (

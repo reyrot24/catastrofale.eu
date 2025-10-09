@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { FormProvider } from "@/pages/Questionario/FormContext";
 import CookieBanner from "@/components/CookieBanner";
 
 const geistSans = Geist({

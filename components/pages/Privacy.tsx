@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
-import { handleDownloadGestioneReclami } from "@/pages/GestioneReclami";
+import { handleDownloadGestioneReclami } from "@/lib/downloadReclamo";
 import Link from "next/link";
 
 const Privacy = () => {

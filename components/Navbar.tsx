@@ -1,5 +1,6 @@
 "use client";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -12,7 +13,13 @@ const Navbar = () => {
           <div className="flex items-center">
             <div className="flex items-center space-x-2">
               <div className="relative">
-                <img src="/logo.svg" />
+                <Image
+                  src="/logo.svg"
+                  alt="logo"
+                  className="w-full"
+                  width={0}
+                  height={0}
+                />
               </div>
               <div>
                 <div className="text-xl font-bold text-blue-900">

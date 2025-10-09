@@ -1,7 +1,6 @@
-import { FormProvider } from "@/pages/Questionario/FormContext";
-import Questionario from "@/pages/Questionario/Questionario";
+import Questionario from "@/components/pages/Questionario/Questionario";
 import React from "react";
 
-export default function page() {
+export default function QuestionarioPage() {
   return <Questionario />;
 }
