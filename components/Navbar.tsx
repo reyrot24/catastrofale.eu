@@ -1,7 +1,9 @@
 "use client";
-import { Menu, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,36 +33,40 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <a
-              href="#preventivo"
+          <nav className="hidden md:flex space-x-8 items-center">
+            <Link
+              href="/questionario-catastrofale"
               className="text-gray-700 hover:text-blue-900 font-medium transition"
             >
               Preventivo
-            </a>
+            </Link>
             <a
               href="#faqs"
               className="text-gray-700 hover:text-blue-900 font-medium transition"
             >
               FAQ
             </a>
-            <a
-              href="#documenti"
-              className="text-gray-700 hover:text-blue-900 font-medium transition"
-            >
-              Documenti
-            </a>
-            <a
-              href="#area-clienti"
+            <Link
+              href="/area-clienti"
               className="text-gray-700 hover:text-blue-900 font-medium transition"
             >
               Area Clienti
+            </Link>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://tidycal.com/sviluppo/introduzione-mobility-express-1rl5ng9"
+            >
+              <Button className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg flex items-center space-x-2 transition transform hover:scale-105">
+                <span>Prenota una call</span>
+                <Phone className="w-5 h-5" />
+              </Button>
             </a>
           </nav>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 cursor-pointer"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
@@ -75,18 +81,28 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t">
-          <div className="px-4 py-4 space-y-3">
-            <a href="#preventivo" className="block text-gray-700 font-medium">
+          <div className="px-4 py-4 space-y-3 ">
+            <Link
+              href="/questionario-catastrofale"
+              className="block text-gray-700 font-medium"
+            >
               Preventivo
-            </a>
-            <a href="#faq" className="block text-gray-700 font-medium">
+            </Link>
+            <a href="#faqs" className="block text-gray-700 font-medium">
               FAQ
-            </a>
-            <a href="#documenti" className="block text-gray-700 font-medium">
-              Documenti
             </a>
             <a href="#area-clienti" className="block text-gray-700 font-medium">
               Area Clienti
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://tidycal.com/sviluppo/introduzione-mobility-express-1rl5ng9"
+            >
+              <Button className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg flex items-center space-x-2 transition transform hover:scale-105">
+                <span>Prenota una call</span>
+                <Phone className="w-5 h-5" />
+              </Button>
             </a>
           </div>
         </div>

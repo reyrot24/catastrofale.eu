@@ -496,15 +496,10 @@ const CatastrofaleHomepage = () => {
               className="inline-flex items-center px-6 py-3 bg-white border border-blue-300 rounded-lg hover:bg-blue-50 transition"
             >
               <FileText className="w-5 h-5 mr-2 text-blue-900" />
-              <span className="font-medium text-blue-900">Legge 213/2023</span>
+              <span className="font-medium text-blue-900">
+                Legge 213/2023 e DM 18/2025
+              </span>
             </Link>
-            <a
-              href="#"
-              className="inline-flex items-center px-6 py-3 bg-white border border-blue-300 rounded-lg hover:bg-blue-50 transition"
-            >
-              <FileText className="w-5 h-5 mr-2 text-blue-900" />
-              <span className="font-medium text-blue-900">DM 18/2025</span>
-            </a>
           </div>
         </div>
       </section>
@@ -540,9 +535,12 @@ const CatastrofaleHomepage = () => {
                 </li>
 
                 <li>
-                  <a href="#" className="hover:text-white transition">
+                  <Link
+                    href="/area-clienti"
+                    className="text-gray-700 hover:text-blue-900 font-medium transition"
+                  >
                     Area Clienti
-                  </a>
+                  </Link>
                 </li>
 
                 {/* ✅ Dialog should live inside an <li> */}

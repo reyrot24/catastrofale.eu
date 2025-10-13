@@ -2,6 +2,9 @@
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { useEffect } from "react";
+import Navbar from "../Navbar";
+import Link from "next/link";
+import { ChevronLeft } from "lucide-react";
 
 const Legge213 = () => {
   useEffect(() => {
@@ -11,7 +14,17 @@ const Legge213 = () => {
   }, []);
   return (
     <main>
+      <Navbar />
+
       <div className="px-[5%] pt-10 pb-18 md:pb-25 bg-white h-full">
+        <Link href="/">
+          <Button
+            variant="outline"
+            className="[&_svg:not([class*='size-'])]:size-8 text-emerald-600 hover:border-emerald-600 hover:text-emerald-600"
+          >
+            <ChevronLeft />
+          </Button>
+        </Link>
         <article
           className={`prose prose-slate max-w-none p-6 rounded-2xl shadow-md bg-white`}
         >
