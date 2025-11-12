@@ -10,16 +10,12 @@ import { validatePIVA, validateTelefono } from "./utils/validationFunctions";
 import Ubicazioni from "./sections/Ubicazioni";
 import SectionHelp from "./sections/SectionHelp";
 import { ChevronLeft } from "lucide-react";
-import { useParams } from "next/navigation";
 import Link from "next/link";
 
 const QuestionarioContent = () => {
   const { formState } = useForm();
   const [errors, setErrors] = useState<{ [key: string]: string | null }>({});
   const [success, setSuccess] = useState(false);
-
-  const params = useParams();
-  const idUid = params?.idUid;
   // Ensure the page is scrolled href top when this component mounts
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -121,7 +117,7 @@ const QuestionarioContent = () => {
 
     setErrors({}); // ✅ Clear errors before saving
     const data = {
-      id: idUid,
+      id: "21731228-0B42-4036-BA6E-476D909DA4E6",
       data: formState,
     };
     InviaForm(data);

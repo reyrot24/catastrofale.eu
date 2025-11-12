@@ -583,7 +583,7 @@ const CatastrofaleHomepage = () => {
               <h3 className="text-white font-semibold mb-4">Assistenza</h3>
               <ul className="space-y-2">
                 <li>Tel: 081 17676699</li>
-                <li>PEC: info@pec.alcabroker.it</li>
+                <li>PEC: alcabrokersrl@legalmail.it</li>
                 <li>Email: info@alcabroker.it</li>
               </ul>
             </div>
