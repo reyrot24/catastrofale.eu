@@ -291,32 +291,38 @@ const CatastrofaleHomepage = () => {
       ),
     },
     {
-      question: "È possibile ottenere il DURC senza la polizza obbligatoria?",
+      question:
+        "E' possibile ottenere contributi pubblici e misure di sostegno senza la polizza obbligatoria?",
       answer: (
         <>
           <p>
             ❌ No. Dalla decorrenza delle sanzioni indirette, la mancata stipula
-            comporta anche il blocco del DURC.
+            comporta anche:
           </p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>❌ Esclusione da contributi pubblici</li>
+            <li>🚫 Limitazioni all’accesso al credito (Fondo PMI)</li>
+            <li>⚠️ Penalizzazioni nell’accesso a misure di sostegno</li>
+          </ul>
           <div className="overflow-x-auto mt-2">
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-slate-100 text-left">
                   <th className="py-2 px-2">Categoria Impresa</th>
-                  <th className="py-2 px-2">Blocco DURC da</th>
+                  <th className="py-2 px-2">Blocco da:</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b">
-                  <td className="py-2 px-2">Grandi imprese</td>
+                  <td className="py-2 px-2">Grandi imprese:</td>
                   <td className="py-2 px-2">30 giugno 2025</td>
                 </tr>
                 <tr className="border-b">
-                  <td className="py-2 px-2">Medie imprese</td>
+                  <td className="py-2 px-2">Medie imprese:</td>
                   <td className="py-2 px-2">1° ottobre 2025</td>
                 </tr>
                 <tr>
-                  <td className="py-2 px-2">Piccole e microimprese</td>
+                  <td className="py-2 px-2">Piccole e microimprese:</td>
                   <td className="py-2 px-2">31 dicembre 2025</td>
                 </tr>
               </tbody>
@@ -326,14 +332,25 @@ const CatastrofaleHomepage = () => {
       ),
     },
     {
-      question: "Come tutelarsi per non perdere l’accesso a DURC e contributi?",
+      question:
+        "Come tutelarsi per non perdere l’accesso a contributi pubblici e misure di sostegno?",
       answer: (
         <ul className="list-disc pl-6 space-y-1">
-          <li>🕒 Stipulare la polizza nei termini previsti</li>
-          <li>📄 Conservare la documentazione assicurativa</li>
           <li>
-            👥 Informare consulenti e referenti aziendali sugli obblighi
-            normativi
+            📌 Stipulare immediatamente la polizza catastrofale obbligatoria per
+            evitare il blocco e le sanzioni indirette.
+          </li>
+          <li>
+            🛡️ Verificare che il massimale sia adeguato alla categoria
+            dell’impresa.
+          </li>
+          <li>
+            📄 Conservare la documentazione assicurativa per eventuali
+            controlli.
+          </li>
+          <li>
+            🔄 Aggiornare annualmente la copertura per mantenere la continuità
+            dell’ammissibilità a incentivi e sostegni.
           </li>
         </ul>
       ),
